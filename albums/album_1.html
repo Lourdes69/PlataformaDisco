@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Album Anti</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  
+    <script src="https://cdn.tailwindcss.com"></script>
+
+     <!-- <link rel="stylesheet" href="./estilos.css">   -->
+  </head>
+
+
+  <body class="bg-[#000814] font-[Poppins] overflow-x-hidden">
+    <div class="capa"></div>
+    <div>
+    <span
+      class="absolute text-[rgb(173,123,103)] text-4xl top-5 left-4 cursor-pointer"
+      onclick="Open()"
+    >
+      <i class="bi bi-music-note-list px-2 py-1 bg-[#edf2f4] rounded-md"></i>
+    </span>
+
+    <div
+      class="sidebar overflow-y-hidden  z-10 fixed top-0 bottom-0 lg:left-0 left-[-300px] duration-1000 p-2 w-[300px] overflow-y-auto text-center bg-gray-900 shadow h-screen">
+      <div class="text-[rgb(173,123,103)] text-xl">
+        <!-- titulo -->
+        <div class="p-2.5 mt-3 flex items-center justify-center">
+          <i class="bi bi-music-note-beamed px-2 py-1"></i>
+          <h1
+            class="font-Archivo text-[rgb(173,123,103)] text-4xl lg:text-5xl italic">
+            Riahanna
+          </h1>
+          <i
+        class="bi bi-x ml-20 cursor-pointer lg:hidden"
+            onclick="Open()"
+          ></i>
+        </div>
+        <hr class="my-3 w-[85%] ml-5 border-[rgb(173,123,103)]" />
+      </div>
+
+      <!-- Inicio -->
+      <div
+        class="p-2.5 mt-5 flex items-center px-4 justify-center cursor-pointer"
+      >
+        <i
+          class="bi bi-house-door text-[rgb(173,123,103)] mr-1 hover:text-white"
+        ></i>
+        <a href="/index.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+          >INICIO</span></a>
+       
+      </div>
+      <hr class="my-2 w-[85%] ml-5 border-[rgb(173,123,103)]" />
+    
+      <div
+        class="p-2.5 mt-5 flex items-center px-4 justify-center cursor-pointer"
+      >
+        <i
+          class="bi bi-house-door text-[rgb(173,123,103)] mr-1 hover:text-white"
+        ></i>
+        <a href="/albums/albums.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+          >ALBUMS</span></a>
+       
+      </div>
+      <hr class="my-2 w-[85%] ml-5 border-[rgb(173,123,103)]" />
+
+      <!-- Agregar Albums -->
+      <div
+        class="p-2.5 mt-5 flex items-center px-4 justify-center cursor-pointer"
+      >
+        <i class="bi bi-disc text-[rgb(173,123,103)] mr-1 hover:text-white"></i>
+        <a href="/addAlbum.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+          >ADD ALBUMS</span>
+        </a>
+      </div>
+<!-- Editar albums -->
+      <hr class="my-2 w-[85%] ml-5 border-[rgb(173,123,103)]" />
+      
+      <div
+      class="p-2.5 mt-5 flex items-center px-4 justify-center cursor-pointer"
+    >
+      <i class="bi bi-disc text-[rgb(173,123,103)] mr-1 hover:text-white"></i>
+      <a href="/addAlbum.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+        >EDIT ALBUMS</span>
+      </a>
+    </div>
+    <!-- Tour -->
+    <hr class="my-2 w-[85%] ml-5 border-[rgb(173,123,103)]" />
+      <div
+        class="p-2.5 mt-5 flex items-center px-4 justify-center cursor-pointer">
+        <a href="/tour.html">
+          <span class="text-lg text-[rgb(173,123,103)] hover:text-white">
+        TOUR
+        </span>
+      </a>
+      </div>
+      <hr class="my-2 w-[85%] ml-5 border-[rgb(173,123,103)]" />
+      <!-- Login -->
+      <div
+        class="p-2.5 mt-5 flex items-center px-4 justify-center cursor-pointer"
+      >
+        <i
+          class="bi bi-person-circle text-[rgb(173,123,103)] mr-1 hover:text-white"
+        ></i>
+        <a href="/login.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+          >LOGIN</span> 
+        </a>
+       
+      </div>
+      <div class="p-2.5 mt-5 flex items-center px-4 cursor-pointer justify-around">
+        <i class="bi bi-youtube text-white hover:text-[#d90429]"></i>
+        <i class="bi bi-spotify text-white hover:text-[#06d6a0]"></i>
+        <i class="bi bi-tiktok text-white hover:text-[#f72585]"></i>
+        <i class="bi bi-instagram text-white hover:text-[#C850C0]"></i>
+      </div>
+
+      >
+    </div>
+
+
+    <div class="flex min-h-full justify-around px-6 py-10 lg:px-8 flex-wrap mt-10 ">
+          <!-- Anti -->
+        <div class="relative overflow-y-hidden md:ml-20 lg:ml-80    space-y-1 flex justify-center flex-col border-2 border-[rgb(255 255 255)] p-8 mt-8 ">
+          <img class="rounded-lg object-cover w-[300px]  " src="https://i.discogs.com/z0A6_5JWC4bPM2r9vMn4i-5LrMEoIKzfuxDwKccRNvo/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzODkz/MzM2LTE1NjM0NzY4/MjctMjIxOS5qcGVn.jpeg" alt="" />
+           <ul class="text-white flex-col flex p-5 ">
+              <div class=" custom-audio-controls mt-5 flex justify-between hover:bg-gray-700 hover:p-3 hover:rounded-sm ">
+                <audio class="audio" src="/audio/anti-3.mp3" preload="metadata"></audio>
+                <button class="play-pause-button" onclick="togglePlayPause(this)">
+                  <span class="play-pause-icon ">&#9658;</span>
+                  <span class="music-info">Consideration</span>
+                </button>
+                <div>
+                   <span class="time-display">2:41</span>
+                </div>
+               
+              </div>
+              <hr class="my-4 w-full border-[#717171] border-1 mr-8" />
+
+              <div class="custom-audio-controls flex justify-between hover:bg-gray-700 hover:p-3 hover:rounded-sm cursor-pointer">
+                <audio class="audio" src="/audio/anti-4.mp3" preload="metadata"></audio>
+                <button class="play-pause-button" onclick="togglePlayPause(this)">
+                  <span class="play-pause-icon ">&#9658;</span> 
+                  <span class="music-info"> Kiss It Better</span> 
+                </button>
+                <div>
+                  <span class="time-display">4:13</span> 
+                </div>
+              </div>
+              <hr class="my-4 w-full border-[#717171] border-1 mr-8" />
+              <div class="custom-audio-controls flex justify-between hover:bg-gray-700 hover:p-3 hover:rounded-sm cursor-pointer">
+                <audio class="audio" src="/audio/anti-5.mp3" preload="metadata"></audio>
+                <button class="play-pause-button" onclick="togglePlayPause(this)">
+                  <span class="play-pause-icon">&#9658;</span> 
+                  <span class="music-info">Close to You</span> 
+                </button>
+                <div>
+                  <span class="time-display">3:57</span> 
+                </div>
+              </div>
+              <hr class="my-4 w-full border-[#717171] border-1 mr-8" />
+              <div class="custom-audio-controls flex justify-between hover:bg-gray-700 hover:p-3 hover:rounded-sm cursor-pointer">
+                <audio class="audio" src="/audio/anti-6.mp3" preload="metadata"></audio>
+                <button class="play-pause-button" onclick="togglePlayPause(this)">
+                  <span class="play-pause-icon">&#9658;</span>
+                  <span class="music-info">Yeah, It Said It</span> 
+                </button>
+                <div>
+                  <span class="time-display">2:12</span> 
+                </div>
+              </div>
+              <hr class="my-4 w-full border-[#717171] border-1 mr-8" />
+              <div class="custom-audio-controls flex justify-between hover:bg-gray-700 hover:p-3 hover:rounded-sm cursor-pointer">
+                <audio class="audio" src="/audio/anti-7.mp3" preload="metadata"></audio>
+                <button class="play-pause-button" onclick="togglePlayPause(this)">
+                  <span class="play-pause-icon">&#9658;</span> 
+                  <span class="music-info">Woo</span> 
+                </button>
+                <div>
+                  <span class="time-display">3:55</span>
+                </div>
+              </div>
+              <hr class="my-4 w-full border-[#717171] border-1 mr-8" />
+              <div class="custom-audio-controls flex justify-between hover:bg-gray-700 hover:p-3 hover:rounded-sm cursor-pointer">
+                <audio class="audio" src="/audio/anti-8.mp3" preload="metadata"></audio>
+                <button class="play-pause-button" onclick="togglePlayPause(this)">
+                  <span class="play-pause-icon">&#9658;</span> 
+                  <span class="music-info">Desperado</span> 
+                </button>
+                <div>
+                  <span class="time-display">3:06</span> 
+                </div>
+              </div>
+              <hr class="my-4 w-full border-[#717171] border-1 mr-8" />
+             </ul>
+        </div>
+    <div>
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+      <h1 class="mt-12 text-center text-3xl font-bold leading-9 tracking-tight text-white">Información del Albums ANTI</h1>
+    </div>
+    <h5 class="font-bold text-center text-3xl mt-10 text-[rgb(173,123,103)]">Origen//</h5>
+    <span class="text-white flex justify-center p-2.5 text-lg">Canada, EE.UU y Francia</span>
+    <h5 class="font-bold text-center text-3xl mt-5 text-[rgb(173,123,103)]">Géneros//</h5>
+    <span class="text-white flex justify-center p-2.5 text-lg">R&B alternativo, Pop, Hip hop, Electro</span>
+    <h5 class="font-bold text-center text-3xl mt-5 text-[rgb(173,123,103)]">Año Lanzado//</h5>
+    <span class="text-white flex justify-center p-2.5 text-lg">28 de enero de 2016 </span>
+    <h5 class="font-bold text-center text-3xl mt-5 text-[rgb(173,123,103)]">Discográfica//</h5>
+    <span class="text-white flex justify-center p-2.5 text-lg">	Roc Nation, West Bury Road </span>
+    <h5 class="font-bold text-center text-3xl mt-5 text-[rgb(173,123,103)]">Productor//</h5>
+    <span class="text-white flex justify-center p-2.5 text-lg">	Riahanna y Robyn Fenty </span>
+  </div>
+    </div> 
+
+    <script>
+      function Open() {
+        document.querySelector(".sidebar").classList.toggle("left-[-10px]");
+      }
+    </script>
+    <script src="./albums.js"></script>
+  </body>
+</html>

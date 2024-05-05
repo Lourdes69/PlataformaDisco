@@ -1,0 +1,49 @@
+
+body{
+    background-image: url(./img/img-portada.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;   
+}
+
+.capa{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+   background: rgba(0, 0, 0, 0.4); 
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.form-container{
+    border: 1px solid rgb(106, 105, 105);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: -2px -2px 0px #7469B6, 1px 1px #6c9cf4;
+}
+audio::-webkit-media-controls-panel {
+    background-color:transparent;
+    border: none;
+    outline: none;
+  }
+ 
+  button.btn-disabled {
+    background: gray !important;
+    cursor: not-allowed; 
+  }
+  button.btn-agotado {
+    color: white; 
+    cursor: not-allowed; 
+  }
+  
+
+@media only screen and (max-width: 767px) {
+    body {
+        background-image: url(./img/imagen-mobile.jpg); 
+        background-position: center center; 
+        background-size: contain; 
+        background-attachment: fixed;
+    }
+}
+
+

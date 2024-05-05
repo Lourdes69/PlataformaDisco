@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riahanna</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+     <!-- <link rel="stylesheet" href="./estilos.css">   -->
+  </head>
+
+
+  <body class="bg-[#000814] font-[Poppins] overflow-x-hidden">
+    <div class="capa"></div>
+    <div>
+    <span
+      class="absolute text-[rgb(173,123,103)] text-4xl top-5 left-4 cursor-pointer"
+      onclick="Open()"
+    >
+      <i class="bi bi-music-note-list px-2 py-1 bg-[#edf2f4] rounded-md"></i>
+    </span>
+
+    <div
+      class="sidebar overflow-y-hidden  z-10 fixed top-0 bottom-0 lg:left-0 left-[-300px] duration-1000 p-2 w-[300px] overflow-y-auto text-center bg-gray-900 shadow h-screen">
+      <div class="text-[rgb(173,123,103)] text-xl">
+        <!-- titulo -->
+        <div class="p-2.5 mt-3 flex items-center justify-center">
+          <i class="bi bi-music-note-beamed px-2 py-1"></i>
+          <h1
+            class="font-Archivo text-[rgb(173,123,103)] text-4xl lg:text-5xl italic">
+            Riahanna
+          </h1>
+          <i
+        class="bi bi-x ml-20 cursor-pointer lg:hidden"
+            onclick="Open()"
+          ></i>
+        </div>
+        <hr class="my-3 w-[85%] ml-5 border-[rgb(173,123,103)]" />
+      </div>
+
+      <!-- Inicio -->
+      <div
+        class="p-2.5 mt-5 flex items-center px-4 justify-center cursor-pointer"
+      >
+        <i
+          class="bi bi-house-door text-[rgb(173,123,103)] mr-1 hover:text-white"
+        ></i>
+        <a href="/index.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+          >INICIO</span></a>
+       
+      </div>
+      <hr class="my-2 w-[85%] ml-5 border-[rgb(173,123,103)]" />
+    
+      <div
+        class="p-2.5 mt-5 flex items-center px-4 justify-center cursor-pointer"
+      >
+        <i
+          class="bi bi-house-door text-[rgb(173,123,103)] mr-1 hover:text-white"
+        ></i>
+        <a href="./albums.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+          >ALBUMS</span></a>
+       
+      </div>
+      <hr class="my-2 w-[85%] ml-5 border-[rgb(173,123,103)]" />
+
+      <!-- Agregar Albums -->
+      <div
+        class="p-2.5 mt-5 flex items-center px-4 justify-center cursor-pointer"
+      >
+        <i class="bi bi-disc text-[rgb(173,123,103)] mr-1 hover:text-white"></i>
+        <a href="/addAlbum.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+          >ADD ALBUMS</span>
+        </a>
+      </div>
+<!-- Editar albums -->
+      <hr class="my-2 w-[85%] ml-5 border-[rgb(173,123,103)]" />
+      
+      <div
+      class="p-2.5 mt-5 flex items-center px-4 justify-center cursor-pointer"
+    >
+      <i class="bi bi-disc text-[rgb(173,123,103)] mr-1 hover:text-white"></i>
+      <a href="/addAlbum.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+        >EDIT ALBUMS</span>
+      </a>
+    </div>
+    <!-- Tour -->
+    <hr class="my-2 w-[85%] ml-5 border-[rgb(173,123,103)]" />
+      <div
+        class="p-2.5 mt-5 flex items-center px-4 justify-center cursor-pointer">
+        <a href="/tour.html">
+          <span class="text-lg text-[rgb(173,123,103)] hover:text-white">
+        TOUR
+        </span>
+      </a>
+      </div>
+      <hr class="my-2 w-[85%] ml-5 border-[rgb(173,123,103)]" />
+      <!-- Login -->
+      <div
+        class="p-2.5 mt-5 flex items-center px-4 justify-center cursor-pointer"
+      >
+        <i
+          class="bi bi-person-circle text-[rgb(173,123,103)] mr-1 hover:text-white"
+        ></i>
+        <a href="/login.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+          >LOGIN</span> 
+        </a>
+       
+      </div>
+      <div class="p-2.5 mt-5 flex items-center px-4 cursor-pointer justify-around">
+        <i class="bi bi-youtube text-white hover:text-[#d90429]"></i>
+        <i class="bi bi-spotify text-white hover:text-[#06d6a0]"></i>
+        <i class="bi bi-tiktok text-white hover:text-[#f72585]"></i>
+        <i class="bi bi-instagram text-white hover:text-[#C850C0]"></i>
+      </div>
+
+      >
+    </div>
+
+
+    <div class="flex min-h-full flex-col  justify-center px-6 py-10 lg:px-8 cursor-pointer">
+        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+          <h2 class="mt-8 text-center text-2xl font-bold leading-9 tracking-tight text-white flex justify-center lg:justify-end">ALBUMS</h2>
+        </div>
+        <div class="md:flex ">
+          <!-- Anti -->
+        <div class="relative overflow-y-hidden lg:ml-80 lg:w-4/12   space-y-1 flex justify-center flex-col border-2 border-[rgb(255 255 255)] p-8 mt-8 lg:transition lg:ease-in-out lg:delay-150 lg:hover:scale-110 ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class=" fav-icono cursor-pointer bi bi-heart text-white mb-2" viewBox="0 0 16 16">
+            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+          </svg>
+            <div class="flex justify-center">
+            <img class="rounded-lg object-cover w-[300px] " src="https://i.discogs.com/z0A6_5JWC4bPM2r9vMn4i-5LrMEoIKzfuxDwKccRNvo/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzODkz/MzM2LTE1NjM0NzY4/MjctMjIxOS5qcGVn.jpeg" alt="" />
+            </div>
+            <div class="text-center">
+            <h2 class="text-white text-2xl ">ANTI</h2>
+            <spam class="text-white text-lg">Pop</spam>
+          </div>
+             <ul class="text-white flex-col flex p-5">
+              <div class="custom-audio-controls flex justify-between">
+                <audio class="audio" src="/audio/anti-1.mp3" preload="metadata"></audio>
+                <button class="play-pause-button" onclick="togglePlayPause(this)">
+                  <span class="play-pause-icon">&#9658;</span>
+                  <span class="music-info">Love on the Brain</span>
+                </button>
+                <div>
+                   <span class="time-display">3:43</span>
+                </div>
+               
+              </div>
+              <hr class="my-4 w-full border-[#717171] border-1 mr-8" />
+
+              <div class="custom-audio-controls flex justify-between">
+                <audio class="audio" src="/audio/anti-2.mp3" preload="metadata"></audio>
+                <button class="play-pause-button" onclick="togglePlayPause(this)">
+                  <span class="play-pause-icon">&#9658;</span>
+                  <span class="music-info">Work</span> 
+                </button>
+                <div>
+                  <span class="time-display">3:39</span> 
+                </div>
+                
+              </div>
+              <a class="flex justify-center" href="./album_1.html"><button class=" border-2 border-[rgb(173,123,103)] text-[rgb(173,123,103)] hover:bg-[#F0B000] hover:border-[#F0B000] hover:text-black mt-8 py-2 px-8 rounded-md text-xl">Ver más temas</button></a>
+             </ul>
+        </div>
+        
+        <!-- Unapologetic -->
+      <div class="relative overflow-y-hidden md:ml-2 lg:ml-10 lg:w-4/12   space-y-1 flex justify-center flex-col border-2 border-[rgb(255 255 255)] p-6 mt-8 lg:transition lg:ease-in-out lg:delay-150 lg:hover:scale-110 ">
+         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"  fill="currentColor" class=" fav-icono cursor-pointer bi bi-heart text-white mb-2" viewBox="0 0 16 16">
+          <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+        </svg> 
+      
+          <div class="flex justify-center">
+          <img class="rounded-lg object-cover w-[300px] " src="https://i.discogs.com/BW0o7Z5eybtqwzmhJFgiKoAXjBhhjJl7erObs_aM2bg/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MTkx/NjM3LTE2NzcxMjMw/OTUtMjMwOS5wbmc.jpeg" alt="" />
+          </div>
+          <div class="text-center">
+            <h2 class="text-white text-2xl ">Unapologetic</h2>
+            <spam class="text-white text-lg">Pop</spam>
+          </div>
+            <ul class="text-white flex-col flex p-5">
+              <div class="custom-audio-controls flex justify-between">
+                <audio class="audio" src="/audio/diamonds.mp3" preload="metadata"></audio>
+                <button class="play-pause-button" onclick="togglePlayPause(this)">
+                  <span class="play-pause-icon">&#9658;</span> 
+                  <span class="music-info">Diamonds</span> 
+                </button>
+                <div>
+                     <span class=" time-display">3:45</span> 
+                </div>
+              </div>
+              <hr class="my-4 w-full  border-[#717171] border-1 mr-8" />
+              <div class="custom-audio-controls flex justify-between flex justify-between">
+                <audio class="audio" src="/audio/pour.mp3" preload="metadata"></audio>
+                <button class="play-pause-button" onclick="togglePlayPause(this)">
+                  <span class="play-pause-icon">&#9658;</span> 
+                  <span class="music-info">Pour It Up</span>
+                </button>
+               <div>
+                <div>
+                   <span class="  time-display">3:14</span> 
+                </div>
+              </div>
+            </div>
+            
+            <a class="flex justify-center" href="/albums/album_2.html">
+              <button class=" border-2 border-[rgb(173,123,103)] text-[rgb(173,123,103)] hover:bg-[#F0B000] hover:border-[#F0B000] hover:text-black mt-8 py-2 px-8 rounded-md text-xl">Ver más temas</button></a>
+             </ul>
+            
+      </div>
+
+      <!-- Loud -->
+        <div class="relative overflow-y-hidden md:ml-2 lg:ml-10 lg:w-4/12   space-y-1 flex justify-center flex-col border-2 border-[rgb(255 255 255)] p-8 mt-8 lg:transition lg:ease-in-out lg:delay-150 lg:hover:scale-110 ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"   fill="currentColor" class="fav-icono cursor-pointer bi bi-heart text-white mb-2" viewBox="0 0 16 16">
+            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+          </svg>
+          <div class="flex justify-center">
+          <img class="rounded-lg object-cover w-[300px] " src="https://www.lahiguera.net/musicalia/artistas/rihanna/disco/4270/portada-m.jpg" alt="" />
+          </div>
+          <div class="text-center">
+            <h2 class="text-white text-2xl ">Loud</h2>
+            <spam class="text-white text-lg">Pop</spam>
+          </div>
+          <ul class="text-white flex-col flex p-5">
+            <div class="custom-audio-controls flex justify-between">
+              <audio class="audio" src="/audio/only.mp3" preload="metadata"></audio>
+              <button class="play-pause-button" onclick="togglePlayPause(this)">
+                <span class="play-pause-icon">&#9658;</span>
+                <span class="music-info">Only Girl</span> 
+              </button>
+              <div>
+                <span class=" time-display">3:55</span>
+              </div>
+            </div>
+            <hr class="my-4 w-full  border-[#717171] border-1 mr-8" />
+            <div class="custom-audio-controls flex justify-between">
+              <audio class="audio" src="/audio/S&M.mp3" preload="metadata"></audio>
+              <button class="play-pause-button" onclick="togglePlayPause(this)">
+                <span class="play-pause-icon">&#9658;</span> 
+                <span class="music-info">S&M</span> 
+              </button>
+              <div>
+                <span class=" time-display">4:03</span> 
+              </div>
+            </div>
+            <a class="flex justify-center" href="./album_3.html">
+              <button class=" border-2 border-[rgb(173,123,103)] text-[rgb(173,123,103)] hover:bg-[#F0B000] hover:border-[#F0B000] hover:text-black mt-8 py-2 px-8 rounded-md text-xl">Ver más temas </button>
+            </a>
+      </ul>
+      </div>
+    </div> 
+  </div>
+
+    <script>
+      function Open() {
+        document.querySelector(".sidebar").classList.toggle("left-[-10px]");
+      }
+    </script>
+    <script src="./albums.js"></script>
+  </body>
+</html>
