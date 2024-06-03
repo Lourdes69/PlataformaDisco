@@ -28,7 +28,7 @@
     </span>
 
     <div
-      class="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] duration-1000 p-2 w-[300px] overflow-y-auto text-center bg-gray-900 shadow h-screen">
+      class="sidebar overflow-y-hidden  fixed top-0 bottom-0 lg:left-0 left-[-300px] duration-1000 p-2 w-[300px] overflow-y-auto text-center bg-gray-900 shadow h-screen">
       <div class="text-[rgb(173,123,103)] text-xl">
         <!-- titulo -->
         <div class="p-2.5 mt-3 flex items-center justify-center">
@@ -63,7 +63,7 @@
       <i
         class="bi bi-house-door text-[rgb(173,123,103)] mr-1 hover:text-white"
       ></i>
-      <a href="./albums/albums.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+      <a href="./albums/album.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
         >ALBUMS</span>
       </a>
     </div>
@@ -85,6 +85,20 @@
       <i class="bi bi-disc text-[rgb(173,123,103)] mr-1 hover:text-white"></i>
       <a href="./editAlbum.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
         >EDIT ALBUMS</span>
+      </a>
+    </div>
+    <hr class="my-2 w-[85%] ml-5 border-[rgb(173,123,103)]" />
+    <!-- Agregar Canciones  -->
+    <div
+      class="p-2.5 mt-5 flex items-center px-4 justify-center cursor-pointer"
+    >
+      <i
+        class="bi bi-disc text-[rgb(173,123,103)] mr-1 hover:text-white"
+      ></i>
+      <a href="./addSong.html"
+        ><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+          >ADD SONG</span
+        >
       </a>
     </div>
     <!-- Tour -->
@@ -122,7 +136,8 @@
    
           <h1 class="text-3xl text-white text-center italic" > <span class="text-[rgb(173,123,103)] text-5xl"> Rihanna </span> es una cantante, actriz, diseñadora y empresaria nacida el 20 de febrero de 1988 en Saint Michael, Barbados. </h1>
           <p class="text-white text-xl lg:text-2xl mt-3">Su carrera musical comenzó en 2005, ha vendido más de 250 millones de discos en todo el mundo, convirtiéndose en una de las artistas más exitosas de la historia.!</p>
-        </div>    
+        </div>
+        <div id="albums-container" class="grid grid-cols-3 gap-4 mt-12 py-30 ml-80"></div>    
       </main>
  
 </div> 
@@ -132,5 +147,6 @@
         document.querySelector(".sidebar").classList.toggle("left-[-10px]");
       }
     </script>
+  
   </body>
 </html>

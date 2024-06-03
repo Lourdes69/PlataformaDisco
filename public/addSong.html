@@ -28,7 +28,7 @@
     </span>
 
     <div
-      class="sidebar z-10 fixed top-0 bottom-0 lg:left-0 left-[-300px] duration-1000 p-2 w-[300px] overflow-y-auto text-center bg-gray-900 shadow h-screen">
+      class="sidebar overflow-y-hidden z-10 fixed top-0 bottom-0 lg:left-0 left-[-300px] duration-1000 p-2 w-[300px] overflow-y-auto text-center bg-gray-900 shadow h-screen">
       <div class="text-[rgb(173,123,103)] text-xl">
         <!-- titulo -->
         <div class="p-2.5 mt-3 flex items-center justify-center">
@@ -63,7 +63,7 @@
       <i
         class="bi bi-house-door text-[rgb(173,123,103)] mr-1 hover:text-white"
       ></i>
-      <a href="./albums/albums.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+      <a href="./albums/album.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
         >ALBUMS</span>
       </a>
     </div>
@@ -120,7 +120,7 @@
     <!-- Editar Albúm -->
     <div class="flex text-center mt-12 min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-          <h class=" text-center text-2xl font-bold leading-9 tracking-tight text-white">Nuevo Albúm</h>
+          <h class=" text-center text-2xl font-bold leading-9 tracking-tight text-white">Agregar una Cancion</h>
         </div>
     <div class=" sm:mx-auto sm:w-full sm:max-w-sm">
         <form class="space-y-6 mt-5" action="#" method="POST">
@@ -154,7 +154,7 @@
           </div>
 
           <div class="flex justify-between flex-wrap">
-              <button type="submit" class=" w-5/12 text-lg bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-purple-600 text-white font-bold py-1.5 px-3 rounded-xl shadow-lg transform transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-110 hover:animate-pulse active:animate-bounce">Agregar</button>
+              <button type="submit" class=" w-5/12 text-lg bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-purple-600 text-white font-bold py-1.5 px-3 rounded-xl shadow-lg transform transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-110 hover:animate-pulse active:animate-bounce">Agregar cancion </button>
               <button type="submit" class="  w-5/12 text-lg bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-purple-600 text-white font-bold py-1.5 px-3 rounded-xl shadow-lg transform transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-110 hover:animate-pulse active:animate-bounce">Cancelar</button>  
           </div>
         </form>
@@ -166,5 +166,8 @@
         document.querySelector(".sidebar").classList.toggle("left-[-10px]");
       }
     </script>
+     <script src="./js/addAlbum.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </body>
 </html>

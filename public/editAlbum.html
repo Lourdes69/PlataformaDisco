@@ -28,7 +28,7 @@
     </span>
 
     <div
-      class="sidebar z-10 fixed top-0 bottom-0 lg:left-0 left-[-300px] duration-1000 p-2 w-[300px] overflow-y-auto text-center bg-gray-900 shadow h-screen">
+      class="sidebar overflow-y-hidden  z-10 fixed top-0 bottom-0 lg:left-0 left-[-300px] duration-1000 p-2 w-[300px] overflow-y-auto text-center bg-gray-900 shadow h-screen">
       <div class="text-[rgb(173,123,103)] text-xl">
         <!-- titulo -->
         <div class="p-2.5 mt-3 flex items-center justify-center">
@@ -61,7 +61,7 @@
       <i
         class="bi bi-house-door text-[rgb(173,123,103)] mr-1 hover:text-white"
       ></i>
-      <a href="./albums/albums.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+      <a href="./albums/album.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
         >ALBUMS</span>
       </a>
     </div>
@@ -81,6 +81,20 @@
       <i class="bi bi-disc text-[rgb(173,123,103)] mr-1 hover:text-white"></i>
       <a href="./editAlbum.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
         >EDIT ALBUMS</span>
+      </a>
+    </div>
+    <hr class="my-2 w-[85%] ml-5 border-[rgb(173,123,103)]" />
+    <!-- Agregar Canciones  -->
+    <div
+      class="p-2.5 mt-5 flex items-center px-4 justify-center cursor-pointer"
+    >
+      <i
+        class="bi bi-disc text-[rgb(173,123,103)] mr-1 hover:text-white"
+      ></i>
+      <a href="./addSong.html"
+        ><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+          >ADD SONG</span
+        >
       </a>
     </div>
     <!-- Tour -->
@@ -111,52 +125,58 @@
         <i class="bi bi-instagram text-white hover:text-[#C850C0]"></i>
       </div>
     </div>
+    
     <!-- Editar Albúm -->
     <div class="flex text-center mt-12 min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-          <h class=" text-center text-2xl font-bold leading-9 tracking-tight text-white">Editar Albúm</h>
-        </div>
-    <div class=" sm:mx-auto sm:w-full sm:max-w-sm">
-        <form class="space-y-6 mt-5" action="#" method="POST">
-          <!-- Titulo -->
+      <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+        <h2 class="text-center text-2xl font-bold leading-9 tracking-tight text-white">Editar Álbum</h2>
+      </div>
+      <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+        <form  class="space-y-6 mt-5" action="#" method="POST"  id="editAlbumForm">
+          <!-- Título -->
           <div>
-            <label for="text" class="block text-lg font-medium leading-6 text-white text-center ">Titulo</label>
+            <label for="title" class="block text-lg font-medium leading-6 text-white text-center">Título</label>
             <div class="mt-2">
-              <input id="text" name="text" type="text" placeholder=""  required class="block cursor-pointer bg-[rgb(0,0,0)] border-[rgb(173,123,103)] border border-solid   rounded-sm  py-1.5 px-2 text-white shadow-sm h-[40px] w-full  placeholder:text-gray-400 focus:outline-none focus:border-orange-300 focus:ring-1 focus:ring-orange-300 sm:text-sm sm:leading-6">
+              <input id="title" name="title" type="text" placeholder="" required class="block cursor-pointer bg-[rgb(0,0,0)] border-[rgb(173,123,103)] border border-solid rounded-sm py-1.5 px-2 text-white shadow-sm h-[40px] w-full placeholder:text-gray-400 focus:outline-none focus:border-orange-300 focus:ring-1 focus:ring-orange-300 sm:text-sm sm:leading-6">
             </div>
           </div>
-         <!-- Año -->
-        <div>
-        <label for="año" class="block text-lg font-medium leading-6 text-white text-center">Año de Lanzamiento</label>
-        <div class="mt-2">
-          <input id="año" name="año" type="month" placeholder=""  required class="block cursor-pointer bg-[rgb(0,0,0)] border-[rgb(173,123,103)] border border-solid   rounded-sm  py-1.5 px-2 text-white shadow-sm h-[40px] w-full  placeholder:text-gray-400 focus:outline-none focus:border-orange-300 focus:ring-1 focus:ring-orange-300 sm:text-sm sm:leading-6">
-        </div>
-        </div>
-    <!-- Descripcion -->
-         <div>
-            <label for="año" class="block text-lg font-medium leading-6 text-white text-center">Descripción</label>
+          <!-- Año -->
+          <div>
+            <label for="year" class="block text-lg font-medium leading-6 text-white text-center">Año de Lanzamiento</label>
             <div class="mt-2">
-              <textarea rows="4" cols="50" id="año" name="año" type="month" placeholder=""  required class=" block cursor-pointer bg-[rgb(0,0,0)] border-[rgb(173,123,103)] border border-solid   rounded-sm  py-1.5 px-2 text-white shadow-sm h-[40px] w-full  placeholder:text-gray-400 focus:outline-none focus:border-orange-300 focus:ring-1 focus:ring-orange-300 sm:text-sm sm:leading-6"></textarea>
+              <input id="year" name="year" type="month" placeholder="" required class="block cursor-pointer bg-[rgb(0,0,0)] border-[rgb(173,123,103)] border border-solid rounded-sm py-1.5 px-2 text-white shadow-sm h-[40px] w-full placeholder:text-gray-400 focus:outline-none focus:border-orange-300 focus:ring-1 focus:ring-orange-300 sm:text-sm sm:leading-6">
             </div>
-        </div>
-     <!-- URL -->
-        <div>
-            <label for="url" class="block text-lg font-medium leading-6 text-white text-center">Imagen(URL)</label>
+          </div>
+          <!-- Descripción -->
+          <div>
+            <label for="description" class="block text-lg font-medium leading-6 text-white text-center">Descripción</label>
             <div class="mt-2">
-              <input id="url" name="url" type="url" placeholder="Ingresa la URL de la imagen"  required class="block cursor-pointer bg-[rgb(0,0,0)] border-[rgb(173,123,103)] border border-solid   rounded-sm  py-1.5 px-2 text-white shadow-sm h-[40px] w-full  placeholder:text-gray-400 focus:outline-none focus:border-orange-300 focus:ring-1 focus:ring-orange-300 sm:text-sm sm:leading-6">
+              <textarea rows="4" cols="50" id="description" name="description" placeholder="" required class="block cursor-pointer bg-[rgb(0,0,0)] border-[rgb(173,123,103)] border border-solid rounded-sm py-1.5 px-2 text-white shadow-sm w-full placeholder:text-gray-400 focus:outline-none focus:border-orange-300 focus:ring-1 focus:ring-orange-300 sm:text-sm sm:leading-6"></textarea>
+            </div>
+          </div>
+          <!-- URL -->
+          <div>
+            <label for="imageUrl" class="block text-lg font-medium leading-6 text-white text-center">Imagen (URL)</label>
+            <div class="mt-2">
+              <input id="imageUrl" name="imageUrl" type="url" placeholder="Ingresa la URL de la imagen" required class="block cursor-pointer bg-[rgb(0,0,0)] border-[rgb(173,123,103)] border border-solid rounded-sm py-1.5 px-2 text-white shadow-sm h-[40px] w-full placeholder:text-gray-400 focus:outline-none focus:border-orange-300 focus:ring-1 focus:ring-orange-300 sm:text-sm sm:leading-6">
             </div>
           </div>
           <div class="flex justify-between flex-wrap">
-              <button type="submit" class=" w-5/12 text-lg bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-purple-600 text-white font-bold py-1.5 px-3 rounded-xl shadow-lg transform transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-110 hover:animate-pulse active:animate-bounce">Editar</button>
-              <button type="submit" class="  w-5/12 text-lg bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-purple-600 text-white font-bold py-1.5 px-3 rounded-xl shadow-lg transform transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-110 hover:animate-pulse active:animate-bounce">Cancelar</button>  
+            <button type="submit" class="w-5/12 text-lg bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-purple-600 text-white font-bold py-1.5 px-3 rounded-xl shadow-lg transform transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-110 hover:animate-pulse active:animate-bounce">Editar</button>
+            <button  id="cancelButton" type="button" onclick="cancelEdit()" class="w-5/12 text-lg bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-purple-600 text-white font-bold py-1.5 px-3 rounded-xl shadow-lg transform transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-110 hover:animate-pulse active:animate-bounce">Cancelar</button>  
           </div>
         </form>
-  </div>
-
+      </div>
+    </div>
+    
     <script>
       function Open() {
         document.querySelector(".sidebar").classList.toggle("left-[-10px]");
       }
     </script>
+    <script src="./js/editAlbum.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
   </body>
 </html>

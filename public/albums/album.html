@@ -52,7 +52,7 @@
         <i
           class="bi bi-house-door text-[rgb(173,123,103)] mr-1 hover:text-white"
         ></i>
-        <a href="/index.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+        <a href="../index.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
           >INICIO</span></a>
        
       </div>
@@ -64,7 +64,7 @@
         <i
           class="bi bi-house-door text-[rgb(173,123,103)] mr-1 hover:text-white"
         ></i>
-        <a href="./albums.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+        <a href="./album.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
           >ALBUMS</span></a>
        
       </div>
@@ -75,7 +75,7 @@
         class="p-2.5 mt-5 flex items-center px-4 justify-center cursor-pointer"
       >
         <i class="bi bi-disc text-[rgb(173,123,103)] mr-1 hover:text-white"></i>
-        <a href="/addAlbum.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+        <a href="../addAlbum.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
           >ADD ALBUMS</span>
         </a>
       </div>
@@ -86,15 +86,29 @@
       class="p-2.5 mt-5 flex items-center px-4 justify-center cursor-pointer"
     >
       <i class="bi bi-disc text-[rgb(173,123,103)] mr-1 hover:text-white"></i>
-      <a href="/addAlbum.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+      <a href="../editAlbum.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
         >EDIT ALBUMS</span>
+      </a>
+    </div>
+    <hr class="my-2 w-[85%] ml-5 border-[rgb(173,123,103)]" />
+    <!-- Agregar Canciones  -->
+    <div
+      class="p-2.5 mt-5 flex items-center px-4 justify-center cursor-pointer"
+    >
+      <i
+        class="bi bi-disc text-[rgb(173,123,103)] mr-1 hover:text-white"
+      ></i>
+      <a href="../addSong.html"
+        ><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+          >ADD SONG</span
+        >
       </a>
     </div>
     <!-- Tour -->
     <hr class="my-2 w-[85%] ml-5 border-[rgb(173,123,103)]" />
       <div
         class="p-2.5 mt-5 flex items-center px-4 justify-center cursor-pointer">
-        <a href="/tour.html">
+        <a href="../tour.html">
           <span class="text-lg text-[rgb(173,123,103)] hover:text-white">
         TOUR
         </span>
@@ -108,7 +122,7 @@
         <i
           class="bi bi-person-circle text-[rgb(173,123,103)] mr-1 hover:text-white"
         ></i>
-        <a href="/login.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
+        <a href="../login.html"><span class="text-lg text-[rgb(173,123,103)] hover:text-white"
           >LOGIN</span> 
         </a>
        
@@ -122,9 +136,9 @@
 
       >
     </div>
-
-
-    <div class="flex min-h-full flex-col  justify-center px-6 py-10 lg:px-8 cursor-pointer">
+    <div id="view-album" class="flex flex-col items-center mt-10 text-white"></div>
+    <div   class="grid grid-cols-3 gap-4 mt-12 py-30 ml-80">   </div>
+    <div id="album-container" class="flex min-h-full flex-col  justify-center px-6 py-10 lg:px-8 cursor-pointer">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
           <h2 class="mt-8 text-center text-2xl font-bold leading-9 tracking-tight text-white flex justify-center lg:justify-end">ALBUMS</h2>
         </div>
@@ -143,7 +157,7 @@
           </div>
              <ul class="text-white flex-col flex p-5">
               <div class="custom-audio-controls flex justify-between">
-                <audio class="audio" src="/audio/anti-1.mp3" preload="metadata"></audio>
+                <audio class="audio" src="../audio/anti-1.mp3" preload="metadata"></audio>
                 <button class="play-pause-button" onclick="togglePlayPause(this)">
                   <span class="play-pause-icon">&#9658;</span>
                   <span class="music-info">Love on the Brain</span>
@@ -156,7 +170,7 @@
               <hr class="my-4 w-full border-[#717171] border-1 mr-8" />
 
               <div class="custom-audio-controls flex justify-between">
-                <audio class="audio" src="/audio/anti-2.mp3" preload="metadata"></audio>
+                <audio class="audio" src="../audio/anti-2.mp3" preload="metadata"></audio>
                 <button class="play-pause-button" onclick="togglePlayPause(this)">
                   <span class="play-pause-icon">&#9658;</span>
                   <span class="music-info">Work</span> 
@@ -185,7 +199,7 @@
           </div>
             <ul class="text-white flex-col flex p-5">
               <div class="custom-audio-controls flex justify-between">
-                <audio class="audio" src="/audio/diamonds.mp3" preload="metadata"></audio>
+                <audio class="audio" src="../audio/diamonds.mp3" preload="metadata"></audio>
                 <button class="play-pause-button" onclick="togglePlayPause(this)">
                   <span class="play-pause-icon">&#9658;</span> 
                   <span class="music-info">Diamonds</span> 
@@ -196,7 +210,7 @@
               </div>
               <hr class="my-4 w-full  border-[#717171] border-1 mr-8" />
               <div class="custom-audio-controls flex justify-between flex justify-between">
-                <audio class="audio" src="/audio/pour.mp3" preload="metadata"></audio>
+                <audio class="audio" src="../audio/pour.mp3" preload="metadata"></audio>
                 <button class="play-pause-button" onclick="togglePlayPause(this)">
                   <span class="play-pause-icon">&#9658;</span> 
                   <span class="music-info">Pour It Up</span>
@@ -208,7 +222,7 @@
               </div>
             </div>
             
-            <a class="flex justify-center" href="/albums/album_2.html">
+            <a class="flex justify-center" href="./album_2.html">
               <button class=" border-2 border-[rgb(173,123,103)] text-[rgb(173,123,103)] hover:bg-[#F0B000] hover:border-[#F0B000] hover:text-black mt-8 py-2 px-8 rounded-md text-xl">Ver más temas</button></a>
              </ul>
             
@@ -228,7 +242,7 @@
           </div>
           <ul class="text-white flex-col flex p-5">
             <div class="custom-audio-controls flex justify-between">
-              <audio class="audio" src="/audio/only.mp3" preload="metadata"></audio>
+              <audio class="audio" src="../audio/only.mp3" preload="metadata"></audio>
               <button class="play-pause-button" onclick="togglePlayPause(this)">
                 <span class="play-pause-icon">&#9658;</span>
                 <span class="music-info">Only Girl</span> 
@@ -239,7 +253,7 @@
             </div>
             <hr class="my-4 w-full  border-[#717171] border-1 mr-8" />
             <div class="custom-audio-controls flex justify-between">
-              <audio class="audio" src="/audio/S&M.mp3" preload="metadata"></audio>
+              <audio class="audio" src="../audio/s&m.mp3" preload="metadata"></audio>
               <button class="play-pause-button" onclick="togglePlayPause(this)">
                 <span class="play-pause-icon">&#9658;</span> 
                 <span class="music-info">S&M</span> 
@@ -252,6 +266,7 @@
               <button class=" border-2 border-[rgb(173,123,103)] text-[rgb(173,123,103)] hover:bg-[#F0B000] hover:border-[#F0B000] hover:text-black mt-8 py-2 px-8 rounded-md text-xl">Ver más temas </button>
             </a>
       </ul>
+ 
       </div>
     </div> 
   </div>
@@ -261,6 +276,9 @@
         document.querySelector(".sidebar").classList.toggle("left-[-10px]");
       }
     </script>
-    <script src="./albums.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./album.js"></script>
+    <script src="./album_details.js"></script>
   </body>
 </html>
